@@ -21,6 +21,10 @@ public class Ex01Controller {
 
     @Autowired
     private TeamService teamservice;
+    
+    public Ex01Controller(TeamService teamservice) {
+        this.teamservice = teamservice;
+    }
     /**
      * 球団一覧表示の処理
      * @param model そのページで表示をさせるだけで問題ない為sessionは不要
