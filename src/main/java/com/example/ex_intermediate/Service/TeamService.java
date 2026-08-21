@@ -9,6 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.ex_intermediate.Domain.Team;
 import com.example.ex_intermediate.Repository.TeamRepository;
 
+/**
+ * @author yoshioka
+ * TeamService
+ */
 @Service
 @Transactional
 public class TeamService {
