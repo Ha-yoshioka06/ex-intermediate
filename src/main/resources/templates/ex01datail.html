@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>球団名</h2>
+    <span th:object="${team}"></span>
+    <span th:text="${team.teamName}"></span><br>
+
+    <h2>本拠地</h2>
+    <span th:text="${team.headquarters}"></span>
+
+    <h2>発足</h2>
+    <span th:text="${team.inauguration}"></span>
+
+    <h2>歴史</h2>
+    <pre th:text="${team.history}"></pre>
+
+    <a th:href="@{/team/List}">
+    <button type="button">戻る</button>
+    </a>
+</body>
+</html>
