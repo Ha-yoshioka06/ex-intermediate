@@ -1,0 +1,13 @@
+spring:
+  application:
+   name: ex-intermediate
+  datasource:
+   driver-class-name: org.postgresql.Driver
+   url: jdbc:postgresql://localhost:5432/student
+   username: postgres
+   password: 0619
+server:
+ servlet:
+  context-path: /ex-intermediate
+  #http://localhost:8080/ex-intermediate/xxx になる
+  
