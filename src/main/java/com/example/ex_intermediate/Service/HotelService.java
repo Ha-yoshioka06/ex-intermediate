@@ -29,7 +29,10 @@ public class HotelService {
         return hotelRepository.findByPrice(price);
     } 
     
-    
+    /**
+     * priceフォームに何も入力されなかった時にの処理
+     * @return 複数件返ってくる為
+     */
     public List<Hotel> Fullselect(){
         return hotelRepository.findAll();
     } 

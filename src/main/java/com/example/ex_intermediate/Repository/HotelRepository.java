@@ -34,6 +34,11 @@ public class HotelRepository {
         return hotel;
     };
 
+   /**
+     * priceの入力に応じて該当件数を返すメソッド
+     * @param price 入力されるpriceに応じて検索するメソッドの為
+     * @return 複数件返ってくる為
+     */
    public List<Hotel> findByPrice(Integer price){
     String sql = "SELECT id, area_name, hotel_name, address, nearest_station, "
     + "price, parking FROM hotels WHERE price <= :price ORDER BY price desc";
@@ -41,7 +46,10 @@ public class HotelRepository {
         List<Hotel> hotelList = template.query(sql, param, HOTEL_ROW_MAPPER);
       return hotelList;
    }
-
+   /**
+     * priceフォームに何も入力されなかった時にの処理
+     * @return 複数件返ってくる為
+     */
    public List<Hotel> findAll(){
     String sql = "SELECT id, area_name, hotel_name, address, nearest_station, "
     + "price, parking FROM hotels ORDER BY price desc";
